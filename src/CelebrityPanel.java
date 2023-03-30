@@ -192,7 +192,10 @@ public class CelebrityPanel extends JPanel implements ActionListener {
     dynamicTimerLabel.setText("" + seconds);
     if (seconds == 0) {
       countdownTimer.stop();
-      staticTimerLabel.setText("Time's up!");
+      staticTimerLabel.setText("Time's up! YOU LOSE");
+      dynamicTimerLabel.setText("");
+      guessButton.setEnabled(false);
+      guessField.setEnabled(false);
     }
   }
   
@@ -230,6 +233,9 @@ public class CelebrityPanel extends JPanel implements ActionListener {
 
     if (controller.getCelebrityGameSize() == 0) {
       clueArea.append("\nNo more celebrities to guess.");
+      staticTimerLabel.setText("YOU WIN!");
+      dynamicTimerLabel.setText("");
+      countdownTimer.stop();
       guessButton.setEnabled(false);
       guessField.setEnabled(false);
     }
