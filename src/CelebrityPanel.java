@@ -204,8 +204,8 @@ public class CelebrityPanel extends JPanel implements ActionListener {
    */
   public void addClue(String clue) {
     clueArea.setText("The clue is: " + clue);
-    seconds = 30;
-    dynamicTimerLabel("" + seconds);
+    seconds = 60;
+    dynamicTimerLabel.setText("" + seconds);
     countdownTimer.restart();
   }
 
