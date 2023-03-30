@@ -180,6 +180,7 @@ public class CelebrityPanel extends JPanel implements ActionListener {
     guessButton.addActionListener(this);
     countdownTimer.addActionListener(this);
     countdownTimer.start();
+    resetButton.addActionListener(this);
   }
   
   /**
