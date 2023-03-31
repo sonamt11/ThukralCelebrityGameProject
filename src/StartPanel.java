@@ -241,4 +241,12 @@ public class StartPanel extends JPanel implements ActionListener {
     controller.addCelebrity(answer, clue, type);
     startButton.setEnabled(true);
   }
+
+  public void reset() {
+    celebrityCount = controller.getCelebrityGameSize();
+    celebrityCountLabel.setText(countLabelText + celebrityCount);
+    answerField.setText("Type celebrity here (4 letters min)");
+    clueField.setText("Enter celebrity clue here (10 letters min)");
+    startButton.setEnabled(false);
+  }
 }

@@ -80,6 +80,11 @@ public class CelebrityGame {
 		celebGameList.add(celebrity);
 	}
 
+	public void reset() {
+		celebGameList.clear();
+		gameWindow.reset();
+	}
+
 	/**
 	 * Validates the name of the celebrity. It must have at least 4 characters.
 	 * @param name The name of the Celebrity

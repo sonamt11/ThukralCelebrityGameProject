@@ -252,6 +252,15 @@ public class CelebrityPanel extends JPanel implements ActionListener {
       String buttonText = clickedButton.getText();
       if (buttonText.equals("Submit guess")) {
         updateScreen();
+      } else if (buttonText.equals("Start again")) {
+        staticTimerLabel.setText("Time remaining: ");
+        dynamicTimerLabel.setText("30");
+        guessField.setText("");
+        clueArea.setText("");
+        clueArea.setBackground(Color.WHITE);
+        guessButton.setEnabled(true);
+        guessField.setEnabled(true);
+        controller.reset();
       }
     }
   }
